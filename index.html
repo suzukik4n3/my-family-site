@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二人の記録</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho Pro", "MS Mincho", serif;
+            background-color: #faf8f5;
+            color: #5a5a5a;
+            line-height: 1.8;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 80px;
+            letter-spacing: 0.15em;
+            color: #4a4a4a;
+        }
+
+        .intro {
+            text-align: center;
+            font-size: 0.95rem;
+            margin-bottom: 100px;
+            color: #7a7a7a;
+            letter-spacing: 0.08em;
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+
+        .memory {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        .memory:nth-child(1) { animation-delay: 0.2s; }
+        .memory:nth-child(2) { animation-delay: 0.4s; }
+        .memory:nth-child(3) { animation-delay: 0.6s; }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .date {
+            font-size: 0.85rem;
+            color: #9a9a9a;
+            margin-bottom: 20px;
+            letter-spacing: 0.1em;
+        }
+
+        .photo {
+            width: 100%;
+            max-width: 500px;
+            height: 350px;
+            background-color: #e8e6e3;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b0b0b0;
+            font-size: 0.9rem;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .comment {
+            font-size: 0.95rem;
+            text-align: center;
+            color: #6a6a6a;
+            letter-spacing: 0.05em;
+            line-height: 1.9;
+        }
+
+        footer {
+            margin-top: 120px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #aaaaaa;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 15px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 60px;
+            }
+
+            .intro {
+                margin-bottom: 70px;
+            }
+
+            .photo {
+                height: 280px;
+            }
+
+            .timeline {
+                gap: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>二人の記録</h1>
+        
+        <p class="intro">何気ない日常をここに置きます</p>
+
+        <div class="timeline">
+            <div class="memory">
+                <div class="date">2024.12.15</div>
+                <div class="photo">
+                    <!-- 写真を入れる場所：<img src="photos/photo1.jpg" alt=""> -->
+                    写真を入れる
+                </div>
+                <p class="comment">夕暮れの散歩道で、いつもの角を曲がった</p>
+            </div>
+
+            <div class="memory">
+                <div class="date">2024.11.03</div>
+                <div class="photo">
+                    <!-- 写真を入れる場所：<img src="photos/photo2.jpg" alt=""> -->
+                    写真を入れる
+                </div>
+                <p class="comment">小さな喫茶店で、静かに並んで座る</p>
+            </div>
+
+            <div class="memory">
+                <div class="date">2024.10.20</div>
+                <div class="photo">
+                    <!-- 写真を入れる場所：<img src="photos/photo3.jpg" alt=""> -->
+                    写真を入れる
+                </div>
+                <p class="comment">窓辺の光が、いつもより優しく感じた朝</p>
+            </div>
+        </div>
+
+        <footer>
+            © 2024
+        </footer>
+    </div>
+</body>
+</html>
